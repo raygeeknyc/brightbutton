@@ -4,6 +4,6 @@ Python code to control an LED illuminated pushbutton from an RPi
 
 Designed for this pushbutton https://www.adafruit.com/product/3105
 
-Put a 10K resistor on the pushbutton
+Put a 10K resistor on the pushbutton to 5VDC
 
-Use an NPN transistor PN222a to switch the LED @ 3.3v with DIO
+Put a 680O resistor on the LED to DIO
