@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+# ################
+# Demo the setting of an illuminated pushbutton's LED and checking for presses
+# ################
 import RPi.GPIO as GPIO
 import sys
 import time
@@ -31,11 +34,12 @@ def main():
   btn = BrightButton(DEMO_PIN_LED, DEMO_PIN_BUTTON)
   btn.on()
   time.sleep(DEMO_DELAY_SECS)
-  while True:
-    if btn.IsPressed():
-      break
-  btn.off()
-  time.sleep(DEMO_DELAY_SECS)
+  for demo_cycle in range(2):
+    while True:
+      if btn.IsPressed():
+        break
+    btn.off()
+    time.sleep(DEMO_DELAY_SECS)
 
 if __name__ == "__main__":
   main()
