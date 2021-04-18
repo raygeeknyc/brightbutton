@@ -32,9 +32,8 @@ class BrightButton(object):
 
 def main():
   btn = BrightButton(DEMO_PIN_LED, DEMO_PIN_BUTTON)
-  btn.on()
-  time.sleep(DEMO_DELAY_SECS)
   for demo_cycle in range(2):
+    btn.on()
     while True:
       if btn.IsPressed():
         break
